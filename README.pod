@@ -1,7 +1,7 @@
 
 =head1 NAME
 
-General Information about the MapReduce & Gearman Demonstration
+Gearman MapReduce Demonstration
 
 =head1 OVERVIEW
 
@@ -81,6 +81,10 @@ Performs the reduce work, updating the final output.
 =item /output
 
 Contains files of all company's subjects and counts.
+
+=item /presentation
+
+Slides from the original Ann Arbor Perl Mongers presentation.
 
 =back
 
