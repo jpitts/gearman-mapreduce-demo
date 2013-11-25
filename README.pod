@@ -3,11 +3,16 @@
 
 Gearman MapReduce Demonstration
 
+
 =head1 OVERVIEW
 
 This application demonstrates how the MapReduce framework can be used with the Gearman system to identify and count subjects in a corpus of documents. While MapReduce is used with many servers across a network, this application is run on one computer using three perl processes (Master, Mapper, and Reducer) and two gearman server processes. 
 
 The input is a corpus of financial filings text. The intermediate output is a text file for each company containing counts and subjects. The final output is a single text file containing counts and subjects.
+
+The original presentation:
+
+http://www.slideshare.net/jamespitts/gearman
 
 
 =head1 REQUIREMENTS
@@ -15,12 +20,15 @@ The input is a corpus of financial filings text. The intermediate output is a te
 Gearman Job Server (gearmand 0.14):
 
 http://gearman.org/
+
 http://launchpad.net/gearmand/trunk/0.14/+download/gearmand-0.14.tar.gz
 
 Required CPAN modules:
 
 Gearman::XS
+
 FreezeThaw
+
 Data::Dumper
 
 
@@ -29,7 +37,9 @@ Data::Dumper
 1. Run the gearmand servers:
 	
 cd $YOUR_GEARMAN_INSTALL_DIR
+
 sbin/gearmand -v --port=4730 --log-file=logs/4730.log &
+
 sbin/gearmand -v --port=4731 --log-file=logs/4731.log &
 
 2. Run the Mapper Worker in shell 1:
